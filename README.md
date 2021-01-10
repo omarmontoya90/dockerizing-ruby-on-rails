@@ -25,19 +25,27 @@ This setup works for app or api with ruby on rails. The words owner_name and pro
 
 ### APP Ruby on Rails
 1. Build docker image
-`$ sudo docker build -t owner_name/project_name .`
+```sh
+$ sudo docker build -t owner_name/project_name .
+```
 The image will be built from a **ruby 2.7.1-slim** image and will have yarn, node, and postgres.
 Remember to change the names of **owner_name** and **project_name** to the names you needs and modify the image name in **docker-compose.yml**
 
 2. Change mod of **docker-entrypoint.sh**
-`$ chmod 777 docker-entrypoint.sh`
+```sh
+$ chmod 777 docker-entrypoint.sh
+```
 It is possible that when executing the docker commands a problem is generated with this file, for this reason the file mode is changed.
 
 3. Create Ruby on Rails project
-`$ sudo docker-compose run web rails new project_name -d postgresql --skip-javascript`
+```sh
+$ sudo docker-compose run web rails new project_name -d postgresql --skip-javascript
+```
 
 4. Change own of project file
-``$ sudo chown -R `whoami` project_name/``
+```sh
+$ sudo chown -R `whoami` project_name/
+```
 Due we generate our rails project from docker, the owner with which docker generates these files does not coincide with that of our machine, so we run this line to avoid inconveniences when the files ar edited.
 
 5. Move docker files to new project
@@ -63,7 +71,9 @@ default: &default
 ```
 
 8. Run rails app
-`sudo docker-compose up`
+``sh
+$ sudo docker-compose up
+``
 
 9. Go to ***localhost:3000*** in your web browser
 
@@ -96,19 +106,27 @@ ENTRYPOINT ["./docker-entrypoint.sh"]
 ```
 
 2. Build docker image
-`$ sudo docker build -t owner_name/project_name .`
+```sh
+$ sudo docker build -t owner_name/project_name .
+```
 The image will be built from a **ruby 2.7.1-slim** image and will have yarn, node, and postgres.
 Remember to change the names of **owner_name** and **project_name** to the names you needs and modify the image name in **docker-compose.yml**
 
 3. Change mod of **docker-entrypoint.sh**
-`$ chmod 777 docker-entrypoint.sh`
+```sh
+$ chmod 777 docker-entrypoint.sh
+```
 It is possible that when executing the docker commands a problem is generated with this file, for this reason the file mode is changed.
 
 4. Create Ruby on Rails project
-`$ sudo docker-compose run web rails new project_name --api --d postgresql`
+```sh
+$ sudo docker-compose run web rails new project_name --api --d postgresql
+```
 
 5. Change own of project file
-``$ sudo chown -R `whoami` project_name/``
+```sh
+$ sudo chown -R `whoami` project_name/
+```
 Due we generate our rails project from docker, the owner with which docker generates these files does not coincide with that of our machine, so we run this line to avoid inconveniences when the files ar edited.
 
 6. Move docker files to new project
@@ -134,6 +152,8 @@ default: &default
 ```
 
 9. Run rails app
-`sudo docker-compose up`
+```sh
+sudo docker-compose up
+```
 
 10. Go to ***localhost:3000*** in your web browser
