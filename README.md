@@ -71,9 +71,9 @@ default: &default
 ```
 
 8. Run rails app
-``sh
+```sh
 $ sudo docker-compose up
-``
+```
 
 9. Go to ***localhost:3000*** in your web browser
 
