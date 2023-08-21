@@ -16,7 +16,7 @@ For production environment, docker files must be modified.
 It is necessary that you have basic knowledge of Docker, it's recommended that you refer to [Docker Overview](https://docs.docker.com/get-started/overview/)
 
 - Install Docker and Docker Compose
-You can check of oficial page of Docker where you find the installation for [Docker Engine](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
+You can check of oficial page of Docker where you find the installation for [Docker Engine](https://docs.docker.com/engine/install/ubuntu/#set-up-the-repository) and [Docker Compose](https://docs.docker.com/compose/install/linux/#install-using-the-repository)
 This setup requires the installation of Docker and Docker Compose, check the versions so you don't have trouble with the step by step.
 You can also try other versions of Docker Engine and Docker Compose, sometimes the steps are similar.
 
