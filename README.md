@@ -60,7 +60,7 @@ $ mv Dockerfile project_name/
 $ cd project_name
 ```
 
-7. In the ***database.yml*** set the next lines
+7. In the ***database.yml*** of `config` folder set the next lines
 ```ruby
 default: &default
   adapter: postgresql
