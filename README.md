@@ -156,4 +156,4 @@ default: &default
 sudo docker-compose up
 ```
 
-10. Go to ***localhost:3000*** in your web browser
+10. Go to ***localhost:3000*** in your web browser.
